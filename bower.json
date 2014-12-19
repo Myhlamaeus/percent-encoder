@@ -16,5 +16,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "utf-8": "~0.1.0",
+    "reg-exp-escaper": "~0.1.0"
+  }
 }
