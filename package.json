@@ -1,6 +1,6 @@
 {
   "name": "percent-encoder",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "percent-encoder\r ===============",
   "main": "percent-encoder.es6",
   "scripts": {
