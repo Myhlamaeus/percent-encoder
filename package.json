@@ -1,0 +1,19 @@
+{
+  "name": "percent-encoder",
+  "version": "0.1.0",
+  "description": "percent-encoder\r ===============",
+  "main": "percent-encoder.es6",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ileri/percent-encoder.git"
+  },
+  "author": "Malte-Maurice Dreyer <dreyer.maltem@gmail.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ileri/percent-encoder/issues"
+  },
+  "homepage": "https://github.com/ileri/percent-encoder"
+}
