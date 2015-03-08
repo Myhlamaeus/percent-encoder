@@ -1,22 +1,22 @@
 {
   "name": "percent-encoder",
-  "version": "0.2.0",
   "description": "percent-encoder\r ===============",
-  "main": "percent-encoder.es6",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.2.0",
+  "author": "Malte-Maurice Dreyer <dreyer.maltem@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/ileri/percent-encoder/issues"
   },
+  "dependencies": {
+    "reg-exp-escaper": "^0.3.1"
+  },
+  "homepage": "https://github.com/ileri/percent-encoder",
+  "license": "GPL-3.0",
+  "main": "percent-encoder.es6",
   "repository": {
     "type": "git",
     "url": "https://github.com/ileri/percent-encoder.git"
   },
-  "author": "Malte-Maurice Dreyer <dreyer.maltem@gmail.com>",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/ileri/percent-encoder/issues"
-  },
-  "homepage": "https://github.com/ileri/percent-encoder",
-  "dependencies": {
-    "reg-exp-escaper": "^0.3.1"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }
