@@ -14,7 +14,7 @@ const encodeByte = function(byte) {
         return parseInt(byte, 16);
     },
     decode = function(chr) {
-        return utf8.toChr(seq.slice(1).split("%").map(decodeBytes));
+        return utf8.toChr(chr.slice(1).split("%").map(decodeByte));
     },
     pRegExp = Symbol("regExp");
 
