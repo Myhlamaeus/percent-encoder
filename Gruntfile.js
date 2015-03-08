@@ -14,6 +14,31 @@ module.exports = function (grunt) {
             main: "percent-encoder",
             global: "PercentEncoder"
         },
+        jshint: {
+            options: {
+                jshintrc: ".jshintrc",
+                reporter: require("jshint-stylish")
+            },
+            gruntfile: {
+                src: "Gruntfile.js"
+            },
+            lib: {
+                src: ["<%= config.main %>.js", "object-path.js", "object-path-list.js"]
+            },
+            test: {
+                src: ["test/**/*.js"]
+            }
+        },
+        watch: {
+            gruntfile: {
+                files: "<%= jshint.gruntfile.src %>",
+                tasks: ["jshint:gruntfile"]
+            },
+            lib: {
+                files: "<%= jshint.lib.src %>",
+                tasks: ["jshint:lib", "nodeunit"]
+            }
+        },
         babel: {
             options: {
                 sourceMap: true
@@ -57,6 +82,8 @@ module.exports = function (grunt) {
             }
         }
     });
+
+    grunt.registerTask("test", ["jshint"]);
 
     grunt.task.registerTask("build:es6", ["uglify:dist"]);
     grunt.task.registerTask("build:cjs", ["babel:dist"]);
