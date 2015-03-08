@@ -16,8 +16,5 @@
     "bower_components",
     "test",
     "tests"
-  ],
-  "dependencies": {
-    "utf-8": "~0.4.0"
-  }
+  ]
 }

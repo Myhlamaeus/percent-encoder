@@ -7,7 +7,8 @@
     "url": "https://github.com/ileri/percent-encoder/issues"
   },
   "dependencies": {
-    "reg-exp-escaper": "^0.3.1"
+    "reg-exp-escaper": "^0.3.1",
+    "utf-8": "git://github.com/ileri/utf-8"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
