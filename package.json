@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ileri/percent-encoder/issues"
   },
-  "homepage": "https://github.com/ileri/percent-encoder"
+  "homepage": "https://github.com/ileri/percent-encoder",
+  "dependencies": {
+    "reg-exp-escaper": "^0.3.1"
+  }
 }

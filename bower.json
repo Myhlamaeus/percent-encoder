@@ -18,7 +18,6 @@
     "tests"
   ],
   "dependencies": {
-    "utf-8": "~0.4.0",
-    "reg-exp-escaper": "~0.2.0"
+    "utf-8": "~0.4.0"
   }
 }

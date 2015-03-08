@@ -1,5 +1,5 @@
 import utf8 from "./bower_components/utf-8/utf-8.es6";
-import {escape as escapeRegExp} from "./bower_components/reg-exp-escaper/reg-exp-escaper.es6";
+import {escape as escapeRegExp} from "reg-exp-escaper";
 
 const encodeByte = function(byte) {
         return byte.toString(16);
