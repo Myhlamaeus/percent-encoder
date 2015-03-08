@@ -1,2 +1,1 @@
-percent-encoder
-===============
+# percent-encoder [![Build Status](https://travis-ci.org/ileri/percent-encoder.svg?branch=master)](https://travis-ci.org/ileri/percent-encoder) [![Code Climate](https://codeclimate.com/github/ileri/percent-encoder/badges/gpa.svg)](https://codeclimate.com/github/ileri/percent-encoder)
