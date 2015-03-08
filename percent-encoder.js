@@ -16,28 +16,31 @@ const encodeByte = function(byte) {
     decode = function(chr) {
         return utf8.toChr(seq.slice(1).split("%").map(decodeBytes));
     },
-    pRegExp = Symbol("regExp"),
-    PercentEncoder = Object.freeze(Object.assign(function PercentEncoder(strs) {
-            if(!Array.isArray(strs) || !strs.length) {
-                throw new TypeError("PercentEncoder: expects array as argument");
-            }
+    pRegExp = Symbol("regExp");
 
-            if(strs.indexOf("%") === -1) {
-                strs.push("%");
-            }
+class PercentEncoder {
+    constructor(strs) {
+        if(!Array.isArray(strs) || !strs.length) {
+            throw new TypeError("PercentEncoder: expects array as argument");
+        }
 
-            this[pRegExp] = new RegExp("(?:" + strs.map(escapeRegExp).join("|") + ")", "g");
-        }, {
-            "decodeRegExp": /%[0-7][0-9a-f]|(?:%[c-d][0-9a-f]|(?:%e[0-9a-f]|%f[0-7]%[8-9a-b][0-9a-f])%[8-9a-b][0-9a-f])%[8-9a-b][0-9a-f]/i,
-            "decode": function(string) {
-                string.replace(this.decodeRegExp, decode);
-            }
-        }));
+        if(strs.indexOf("%") === -1) {
+            strs.push("%");
+        }
 
-Object.freeze(Object.assign(PercentEncoder.prototype, {
-    "encode": function(string) {
+        this[pRegExp] = new RegExp("(?:" + strs.map(escapeRegExp).join("|") + ")", "g");
+    }
+
+    encode(string) {
         string.replace(this[pRegExp], encode);
     }
-}));
+}
+
+Object.assign(PercentEncoder, {
+    decodeRegExp: /%[0-7][0-9a-f]|(?:%[c-d][0-9a-f]|(?:%e[0-9a-f]|%f[0-7]%[8-9a-b][0-9a-f])%[8-9a-b][0-9a-f])%[8-9a-b][0-9a-f]/i,
+    decode(string) {
+        string.replace(this.decodeRegExp, decode);
+    }
+});
 
 export default PercentEncoder;
