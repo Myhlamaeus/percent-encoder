@@ -29,7 +29,7 @@
     "url": "https://github.com/ileri/percent-encoder.git"
   },
   "scripts": {
-    "build": "grunt build:cjs",
+    "prepublish": "grunt build:cjs",
     "test": "grunt test"
   }
 }
